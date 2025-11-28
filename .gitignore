@@ -1,0 +1,54 @@
+# -------------------------
+# Python cache and compiled files
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.py[cod]
+
+# -------------------------
+# Virtual environment folders
+# -------------------------
+venv/
+env/
+.venv/
+
+# -------------------------
+# Jupyter Notebook checkpoints
+# -------------------------
+.ipynb_checkpoints/
+
+# -------------------------
+# Dataset files (large CSVs, Excel files)
+# -------------------------
+data/
+*.csv
+*.xlsx
+
+# -------------------------
+# Model files
+# -------------------------
+models/
+*.h5
+*.pkl
+*.joblib
+
+# -------------------------
+# Logs
+# -------------------------
+logs/
+*.log
+
+# -------------------------
+# Windows system files
+# -------------------------
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# -------------------------
+# IDE / editor folders
+# -------------------------
+.vscode/
+.idea/
