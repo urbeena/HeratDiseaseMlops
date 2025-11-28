@@ -3,15 +3,25 @@ import pandas as pd
 import joblib
 import pickle
 import streamlit as st
+import os
 
 # -------- Load Required Files --------
-model = joblib.load("HeartDisease/models/best_model.pkl")
-scaler = pickle.load(open("HeartDisease/models/scaler.pkl", "rb"))
+# Get folder where this script is located
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-with open("HeartDisease/models/selected_features.txt", "r") as f:
+# Load model and other files
+model_path = os.path.join(BASE_DIR, "models", "best_model.pkl")
+scaler_path = os.path.join(BASE_DIR, "models", "scaler.pkl")
+encoders_path = os.path.join(BASE_DIR, "models", "encoders.pkl")
+selected_features_path = os.path.join(BASE_DIR, "models", "selected_features.txt")
+
+model = joblib.load(model_path)
+scaler = pickle.load(open(scaler_path, "rb"))
+
+with open(selected_features_path, "r") as f:
     selected_features = [line.strip() for line in f]
 
-encoders = pickle.load(open("HeartDisease/models/encoders.pkl", "rb"))
+encoders = pickle.load(open(encoders_path, "rb"))
 
 # Title
 st.title("💓 Heart Disease Prediction App (Local Model)")
