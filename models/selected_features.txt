@@ -1,0 +1,6 @@
+ChestPainType
+Cholesterol
+MaxHR
+ExerciseAngina
+Oldpeak
+ST_Slope

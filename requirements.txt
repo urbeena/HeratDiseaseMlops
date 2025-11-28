@@ -1,0 +1,11 @@
+pandas 
+numpy
+scikit-learn
+os
+pickle
+xgboost
+streamlit
+joblib
+sklearn-pandas
+category-encoders
+
